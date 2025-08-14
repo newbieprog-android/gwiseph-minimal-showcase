@@ -1,54 +1,35 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-devices.jpg";
-
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <div className="scroll-snap-container">
+  return <div className="scroll-snap-container">
       {/* Sticky Header */}
       <header className="fixed top-0 left-0 right-0 z-50 header-backdrop">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="text-xl font-semibold text-foreground">GwisePH</div>
             <div className="hidden md:flex items-center space-x-8">
-              <button 
-                onClick={() => scrollToSection('iphone')}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <button onClick={() => scrollToSection('iphone')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 iPhone
               </button>
-              <button 
-                onClick={() => scrollToSection('macbook')}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <button onClick={() => scrollToSection('macbook')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 MacBook
               </button>
-              <button 
-                onClick={() => scrollToSection('ipad')}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <button onClick={() => scrollToSection('ipad')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 iPad
               </button>
-              <button 
-                onClick={() => scrollToSection('android')}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <button onClick={() => scrollToSection('android')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 Android Phones
               </button>
-              <button 
-                onClick={() => scrollToSection('wearables')}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <button onClick={() => scrollToSection('wearables')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 Wearables
               </button>
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <button onClick={() => scrollToSection('about')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 About
               </button>
             </div>
@@ -65,23 +46,14 @@ const Index = () => {
               <br />
               <span className="font-medium">Choose Wisely.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-light">
-              Find the best deals on iPhone, MacBook, iPad, Android phones, and wearables in the Philippines.
-            </p>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-light">Stay updated with the latest Gadget prices from authorized retailers across the Philippines. Compare prices and make informed purchasing decisions.</p>
             <div className="mb-16">
-              <Button 
-                onClick={() => scrollToSection('iphone')}
-                className="apple-button text-lg px-8 py-4"
-              >
+              <Button onClick={() => scrollToSection('iphone')} className="apple-button text-lg px-8 py-4">
                 Compare Prices
               </Button>
             </div>
             <div className="max-w-5xl mx-auto">
-              <img 
-                src={heroImage} 
-                alt="Apple devices - iPhone, MacBook, iPad" 
-                className="w-full h-auto object-cover rounded-3xl shadow-2xl"
-              />
+              <img src={heroImage} alt="Apple devices - iPhone, MacBook, iPad" className="w-full h-auto object-cover rounded-3xl shadow-2xl" />
             </div>
           </div>
         </div>
@@ -241,8 +213,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
